@@ -11,20 +11,43 @@ import
   { 
     Container,
     Header, 
+    Left,
+    Button,
+    Icon,
+    Body,
+    Title,
+    Right,
     Content,
     Text,
-    Footer
+    Footer,
+    FooterTab
   }
   from 'native-base'
 
 const App = () =>  {
   return (
     <Container>
-      <Header></Header>
-      <Content>
+      <Header>
+        <Left>
+          <Button transparent>
+            <Icon name="menu" />
+          </Button>
+        </Left>
+        <Body>
+          <Title>Header</Title>
+        </Body>
+        <Right />
+      </Header>
+      <Content padder>
         <Text>Hello World</Text>
       </Content>
-      <Footer></Footer>
+      <Footer>
+        <FooterTab>
+          <Button full>
+            <Text>Footer</Text>
+          </Button>
+        </FooterTab>
+      </Footer>
     </Container>
   )
 }
