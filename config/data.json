@@ -1,0 +1,18 @@
+{
+  "creditors": [
+    {
+      "name": "sombo",
+      "debtors": [
+        {
+          "name": "sambath"
+        }, 
+        {
+          "name": "vichea"
+        },
+        {
+          "name": "sitha"
+        }
+      ]
+    }
+  ]
+}
