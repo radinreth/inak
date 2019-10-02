@@ -27,27 +27,37 @@ import
   }
   from 'native-base'
 
+import { Alert } from 'react-native'
+
 class App extends React.Component  {
-  
-  render() {
-    const data = {
-      name: 'sambo',
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
       debtors: [
         {
-          id: 1,
-          name: 'sitha'
+          id: 1, name: 'sitha'
         },
         {
-          id: 2,
-          name: 'chenda'
+          id: 2, name: 'chenda'
         },
         {
-          id: 3,
-          name: 'vorleak'
+          id: 3, name: 'vorleak'
         }
       ]
     }
+  }
 
+  addDebtor = () => {
+    this.setState((prev) => {
+      return {
+        debtors: [...prev.debtors, { id: (prev.debtors.length+1), name: 'john' }]
+      }
+    })
+  }
+  
+  render() {
     return (
       <Root>
         <Container>
@@ -61,8 +71,8 @@ class App extends React.Component  {
               <Title>All debtors</Title>
             </Body>
             <Right>
-              <Button transparent>
-                <Icon name="menu" />
+              <Button transparent onPress={this.addDebtor.bind(this)}>
+                <Icon name="ios-add-circle" />
               </Button>
             </Right>
           </Header>
@@ -70,7 +80,7 @@ class App extends React.Component  {
           <Content padder>
             <List>
               {
-                data.debtors.map( d => {
+                this.state.debtors.map( d => {
                   return <ListItem key={String(d.id)}>
                     <Text>{d.name}</Text>
                   </ListItem>
