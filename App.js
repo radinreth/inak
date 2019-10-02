@@ -28,9 +28,10 @@ import
   from 'native-base'
 
 import { Alert } from 'react-native'
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack'
 
-class App extends React.Component  {
-
+class HomeScreen extends React.Component  {
   constructor(props) {
     super(props)
 
@@ -102,4 +103,10 @@ class App extends React.Component  {
   }
 }
 
-export default App;
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen
+  }
+})
+
+export default createAppContainer(AppNavigator);
