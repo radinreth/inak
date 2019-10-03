@@ -10,9 +10,17 @@ import { YellowBox } from 'react-native'
 
 YellowBox.ignoreWarnings(['Warning', 'deprecated'])
 
-class DebtorScreen extends React.Component {
+class DebtorCreateScreen extends React.Component {
   constructor(props) {
     super(props)
+
+    this.handleSave = this.handleSave.bind(this)
+  }
+
+  handleSave = () => {
+    let { navigation } = this.props
+
+    navigation.navigate('DebtorShow')
   }
 
   render() {
@@ -57,7 +65,8 @@ class DebtorScreen extends React.Component {
                 />
               </Item>
 
-              <Button block iconLeft style={{  marginTop: 40 }}>
+              <Button block iconLeft style={{  marginTop: 40 }}
+                onPress={this.handleSave}>
                 <Icon name="ios-add-circle" />
                 <Text>Save</Text>
               </Button>
@@ -77,4 +86,4 @@ class DebtorScreen extends React.Component {
   }
 }
 
-export default DebtorScreen
+export default DebtorCreateScreen

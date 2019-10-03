@@ -11,13 +11,15 @@ import { createStackNavigator } from 'react-navigation-stack'
 
 // Screens
 import HomeScreen from './src/screens/HomeScreen'
-import DebtorScreen from './src/screens/DebtorScreen'
+import DebtorCreateScreen from './src/screens/DebtorCreateScreen'
+import DebtorShowScreen from './src/screens/DebtorShowScreen'
 
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
-  Debtor: DebtorScreen
+  DebtorCreate: DebtorCreateScreen,
+  DebtorShow: DebtorShowScreen,
 }, {
-  initialRouteName: 'Debtor'
+  initialRouteName: 'Home'
 })
 
 export default createAppContainer(AppNavigator);

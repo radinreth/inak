@@ -32,7 +32,7 @@ class HomeScreen extends React.Component {
 
   addDebtor = () => {
     let { navigation } = this.props
-    navigation.navigate('Debtor')
+    navigation.navigate('DebtorCreate')
   }
   
   render() {
