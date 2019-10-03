@@ -1,21 +1,9 @@
 import React from 'react'
 import 
   { 
-    Root,
-    Container,
-    Header, 
-    Left,
-    Button,
-    Icon,
-    Body,
-    Title,
-    Right,
-    Content,
-    Text,
-    Footer,
-    FooterTab,
-  }
-  from 'native-base'
+    Root, Container, Header,  Left, Button, Icon, 
+    Body, Title, Right, Content, Text, Footer, FooterTab,
+  } from 'native-base'
 
 class DebtorScreen extends React.Component {
   constructor(props) {

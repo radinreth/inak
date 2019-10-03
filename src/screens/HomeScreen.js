@@ -1,25 +1,15 @@
 import React from 'react'
 import 
   { 
-    Root,
-    Container,
-    Header, 
-    Left,
-    Button,
-    Icon,
-    ListItem,
-    List,
-    Body,
-    Title,
-    Right,
-    Content,
-    Text,
-    Footer,
-    FooterTab,
-  }
-  from 'native-base'
+    Root, Container, Header, Left, Button, Icon, ListItem, 
+    List, Body, Title, Right, Content, Text, Footer, FooterTab,
+  } from 'native-base'
 
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Home'
+  }
+
   constructor(props) {
     super(props)
 
