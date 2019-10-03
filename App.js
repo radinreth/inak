@@ -17,7 +17,7 @@ const AppNavigator = createStackNavigator({
   Home: HomeScreen,
   Debtor: DebtorScreen
 }, {
-  initialRouteName: 'Home'
+  initialRouteName: 'Debtor'
 })
 
 export default createAppContainer(AppNavigator);
