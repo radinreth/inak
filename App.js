@@ -19,7 +19,11 @@ const AppNavigator = createStackNavigator({
   DebtorCreate: DebtorCreateScreen,
   DebtorShow: DebtorShowScreen,
 }, {
-  initialRouteName: 'Home'
+  initialRouteName: 'Home',
+  headerMode: 'none',
+  navigationOptions: {
+    headerVisible: false,
+  }
 })
 
 export default createAppContainer(AppNavigator);

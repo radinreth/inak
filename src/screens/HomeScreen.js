@@ -6,10 +6,6 @@ import
   } from 'native-base'
 
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home'
-  }
-
   constructor(props) {
     super(props)
 
